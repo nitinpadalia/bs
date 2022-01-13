@@ -1,0 +1,29 @@
+{
+  "name": "week1",
+  "version": "1.0.0",
+  "description": "Week 1 Excercise",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinpadalia/bs.git"
+  },
+  "author": "Nitin Padalia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitinpadalia/bs/issues"
+  },
+  "homepage": "https://github.com/nitinpadalia/bs#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.1",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.12.9"
+  }
+}

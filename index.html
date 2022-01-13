@@ -1,0 +1,138 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="id=edge">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header class="jumbotron">
+        <div>
+            <h1>Amazon EC2 Instance Types</h1>
+        </div>
+        <div>
+            Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload.
+        </div>       
+    </header>
+    
+    <div class="container"> 
+        <div class="row align-items-center row-padd">
+            <div class="col-12 col-sm-4 order-sm-first">
+                <h1>General Purpose</h1>
+            </div>
+            <div class="col-12 col-sm">
+                General purpose instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads. These instances are ideal for applications that use these resources in equal proportions such as web servers and code repositories. 
+            
+            
+                Each vCPU is a thread of either an Intel Xeon core or an AMD EPYC core, except for M6g instances, A1 instances, T2 instances, and m3.medium.
+                
+                Each vCPU on T4g and M6g instances is a core of the AWS Graviton2 processor.
+                Each vCPU on A1 instances is a core of an AWS Graviton Processor.
+                † AVX, AVX2, and Enhanced Networking are only available on instances launched with HVM AMIs.
+                
+                * This is the default and maximum number of vCPUs available for this instance type. You can specify a custom number of vCPUs when launching this instance type. For more details on valid vCPU counts and how to start using this feature, visit the Optimize CPUs documentation page here.
+                
+                ** These M4 instances may launch on an Intel Xeon E5-2686 v4 (Broadwell) processor.  
+                
+                *** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see instance network bandwidth.
+            
+
+            </div>
+        </div>
+        <div class="row align-items-center row-padd">
+            <div class="col-12 col-sm-4 order-sm-last">
+                <h1>Compute Optimized</h1>
+            </div>
+            <div class="col-12 col-sm">
+                Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. Instances belonging to this family are well suited for batch processing workloads, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
+Each vCPU on C6g and C6gn instances is a core of the AWS Graviton2 processor.
+† AVX, AVX2, and Enhanced Networking are only available on instances launched with HVM AMIs.
+
+* This is the default and maximum number of vCPUs available for this instance type. You can specify a custom number of vCPUs when launching this instance type. For more details on valid vCPU counts and how to start using this feature, visit the Optimize CPUs documentation page here.
+
+*** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see instance network bandwidth.
+            </div>
+        </div>
+        <div class="row align-items-center row-padd">
+            <div class="col-12 col-sm-4 order-sm-first">
+                <h1>Memory Optimized</h1>
+            </div>
+            <div class="col-12 col-sm">
+                Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory.
+
+Each vCPU on R6g and X2gd instances is a core of the AWS Graviton2 processor.
+*** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see instance network bandwidth.
+</div>
+        </div>
+    </div>
+    
+    <footer class="container-fluid footer" >
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-3 col-sm-3">
+                    <ul class="list-unstyled">
+                        <li class="h5">Learn About AWS</li>
+                        <li>What Is AWS?</li>
+                        <li>What Is Cloud Computing?</li>
+                        <li>AWS Inclusion, Diversity & Equity</li>
+                        <li>What Is DevOps?</li>
+                        <li>What Is a Container?</li>
+                        <li>What Is a Data Lake?</li>
+                        <li>AWS Cloud Security</li>
+                        <li>What's New</li>
+                        <li>Blogs</li>
+                        <li>Press Releases</li>
+                    </ul>
+                </div>
+                <div class="col-3 col-sm-3">
+                    <ul class="list-unstyled">
+                        <li class="h5">Resources for AWS</li>
+                        <li>Getting Started</li>
+                        <li>Training and Certification</li>
+                        <li>AWS Solutions Portfolio</li>
+                        <li>Architecture Center</li>
+                        <li>Product and Technical FAQs</li>
+                        <li>Analyst Reports</li>
+                        <li>AWS Partner Network</li>
+                    </ul>    
+                </div>
+                <div class="col-3 col-sm-3">
+                    <ul class="list-unstyled">
+                        <li class="h5">Developers on AWS</li>
+                        <li>Developer Center</li>
+                        <li>SDKs & Tools</li>
+                        <li>.NET on AWS</li>
+                        <li>Python on AWS</li>
+                        <li>Java on AWS</li>
+                        <li>PHP on AWS</li>
+                        <li>JavaScript on AWS</li>
+                    </ul> 
+                </div>
+                <div class="col-3 col-sm-3">
+                    <ul class="list-unstyled">
+                        <li class="h5">Help/li>
+                        <li>Contact Us</li>
+                        <li>AWS Careers</li>
+                        <li>File a Support Ticket</li>
+                        <li>Knowledge Center</li>
+                        <li>AWS re:Post</li>
+                        <li>AWS Support Overview</li>
+                        <li>Legal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- jQuery first, then pooper.js then bootstrap.js-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
