@@ -5,6 +5,8 @@
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -12,123 +14,188 @@
 </head>
 
 <body>
-    <header class="jumbotron">
-        <div>
-            <h1>Amazon EC2 Instance Types</h1>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class=navbar-brand href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-            Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload.
-        </div>       
+    </nav>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <!-- Task 3: Create Reserve Table Button sharing equal width with the logo -->
+                <div class="col-12 col-sm-6 align-self-center">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm">
+                            <img src="img/logo.png" class="img-fluid">
+                        </div>
+                        <div class="col-12 col-sm">
+                            <a href="#reservertable" class="btn btn-sm btn-warning btn-block" role="button">Reserve Table</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
     </header>
     
     <div class="container"> 
-        <div class="row align-items-center row-padd">
-            <div class="col-12 col-sm-4 order-sm-first">
-                <h1>General Purpose</h1>
-            </div>
-            <div class="col-12 col-sm">
-                General purpose instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads. These instances are ideal for applications that use these resources in equal proportions such as web servers and code repositories. 
-            
-            
-                Each vCPU is a thread of either an Intel Xeon core or an AMD EPYC core, except for M6g instances, A1 instances, T2 instances, and m3.medium.
-                
-                Each vCPU on T4g and M6g instances is a core of the AWS Graviton2 processor.
-                Each vCPU on A1 instances is a core of an AWS Graviton Processor.
-                † AVX, AVX2, and Enhanced Networking are only available on instances launched with HVM AMIs.
-                
-                * This is the default and maximum number of vCPUs available for this instance type. You can specify a custom number of vCPUs when launching this instance type. For more details on valid vCPU counts and how to start using this feature, visit the Optimize CPUs documentation page here.
-                
-                ** These M4 instances may launch on an Intel Xeon E5-2686 v4 (Broadwell) processor.  
-                
-                *** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see instance network bandwidth.
-            
-
-            </div>
-        </div>
-        <div class="row align-items-center row-padd">
+        <div class="row align-items-center row-content">
             <div class="col-12 col-sm-4 order-sm-last">
-                <h1>Compute Optimized</h1>
+                <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-12 col-sm">
-                Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. Instances belonging to this family are well suited for batch processing workloads, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
-Each vCPU on C6g and C6gn instances is a core of the AWS Graviton2 processor.
-† AVX, AVX2, and Enhanced Networking are only available on instances launched with HVM AMIs.
-
-* This is the default and maximum number of vCPUs available for this instance type. You can specify a custom number of vCPUs when launching this instance type. For more details on valid vCPU counts and how to start using this feature, visit the Optimize CPUs documentation page here.
-
-*** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see instance network bandwidth.
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
+                    <div class="media-body">
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
-        <div class="row align-items-center row-padd">
+        <div class="row align-items-center row-content">
             <div class="col-12 col-sm-4 order-sm-first">
-                <h1>Memory Optimized</h1>
+                <h3>This Month's Promotions</h3>
+            </div>
+            <!-- Task 2 -->
+            <div class="col-12 col-sm">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>Weekend Grand Buffet <span class="badge badge-danger">New</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Buffet">
+                </div>
+                </div>
+        </div>
+        <div class="row align-items-center row-content">
+            <div class="col-12 col-sm-4 order-sm-last">
+                <h3>Meet our Culinary Specialists</h3>
             </div>
             <div class="col-12 col-sm">
-                Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory.
-
-Each vCPU on R6g and X2gd instances is a core of the AWS Graviton2 processor.
-*** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see instance network bandwidth.
-</div>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya">
+                    <div class="media-body">
+                        <h2 class="mt-0">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Task 1 -->
+        <div class="row align-items-center justify-content-center row-content" id="reservertable">
+            <div class="col-12 col-sm-8">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="numberofguests" class="col-sm-2 col-form-label">Number of Guests</label>
+                                <div class="co-12 col-md-10">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="g1" name="numofguests" value="1">
+                                        <label class="form-check-label" for="g1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="g2" name="numofguests" value="2">
+                                        <label class="form-check-label" for="g2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="g3" name="numofguests" value="3">
+                                        <label class="form-check-label" for="g3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="g4" name="numofguests" value="4">
+                                        <label class="form-check-label" for="g4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="g5" name="numofguests" value="5">
+                                        <label class="form-check-label" for="g5">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="g6" name="numofguests" value="6">
+                                        <label class="form-check-label" for="g6">6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateandtime" class="col-12 col-sm-2 col-form-label"> Date and time</label>
+                                <div class="col-12 col-sm-4">
+                                    <input type="date" class="form-control" id="dateval" name="dateval" placeholder="Date">
+                                </div> 
+                                <div class="col-12 col-sm-4">
+                                    <input type="time" class="form-control" id="timeval" name="timeval" placeholder="Time">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-10">
+                                    <button type="submit" role="button" class="btn btn-primary">Reserve</button>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
-    <footer class="container-fluid footer" >
+    <footer class="footer">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-3 col-sm-3">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li class="h5">Learn About AWS</li>
-                        <li>What Is AWS?</li>
-                        <li>What Is Cloud Computing?</li>
-                        <li>AWS Inclusion, Diversity & Equity</li>
-                        <li>What Is DevOps?</li>
-                        <li>What Is a Container?</li>
-                        <li>What Is a Data Lake?</li>
-                        <li>AWS Cloud Security</li>
-                        <li>What's New</li>
-                        <li>Blogs</li>
-                        <li>Press Releases</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-3 col-sm-3">
-                    <ul class="list-unstyled">
-                        <li class="h5">Resources for AWS</li>
-                        <li>Getting Started</li>
-                        <li>Training and Certification</li>
-                        <li>AWS Solutions Portfolio</li>
-                        <li>Architecture Center</li>
-                        <li>Product and Technical FAQs</li>
-                        <li>Analyst Reports</li>
-                        <li>AWS Partner Network</li>
-                    </ul>    
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Clear Water Bay, Kowloon<br>
+		              HONG KONG<br>
+		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+		              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+		           </address>
                 </div>
-                <div class="col-3 col-sm-3">
-                    <ul class="list-unstyled">
-                        <li class="h5">Developers on AWS</li>
-                        <li>Developer Center</li>
-                        <li>SDKs & Tools</li>
-                        <li>.NET on AWS</li>
-                        <li>Python on AWS</li>
-                        <li>Java on AWS</li>
-                        <li>PHP on AWS</li>
-                        <li>JavaScript on AWS</li>
-                    </ul> 
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon "href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
                 </div>
-                <div class="col-3 col-sm-3">
-                    <ul class="list-unstyled">
-                        <li class="h5">Help/li>
-                        <li>Contact Us</li>
-                        <li>AWS Careers</li>
-                        <li>File a Support Ticket</li>
-                        <li>Knowledge Center</li>
-                        <li>AWS re:Post</li>
-                        <li>AWS Support Overview</li>
-                        <li>Legal</li>
-                    </ul>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
-            </div>
+           </div>
         </div>
-        
     </footer>
 
     <!-- jQuery first, then pooper.js then bootstrap.js-->
