@@ -73,6 +73,90 @@
             </div>
         </div>
     </div>
+    <!-- Task 1 -->
+    <!-- Task 1.2: modal HTML code is included towards the top of the body of the page near the other modal code -->
+    <div class="modal fade" id="reservertable" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="reservationform">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h3 class="modal-title">Reserve a Table</h3>
+                    <!-- Task 1.4: modal header includes a X button to dismiss the modal. -->
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Task 1.1:  form has been moved into a modal -->
+                    <form>
+                        <div class="form-group row">
+                            <label for="numberofguests" class="col-sm-2 col-form-label">Number of Guests</label>
+                            <div class="co-12 col-md-10">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="g1" name="numofguests" value="1">
+                                    <label class="form-check-label" for="g1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="g2" name="numofguests" value="2">
+                                    <label class="form-check-label" for="g2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="g3" name="numofguests" value="3">
+                                    <label class="form-check-label" for="g3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="g4" name="numofguests" value="4">
+                                    <label class="form-check-label" for="g4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="g5" name="numofguests" value="5">
+                                    <label class="form-check-label" for="g5">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="g6" name="numofguests" value="6">
+                                    <label class="form-check-label" for="g6">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Task 2: Create smoking and non-smoking radio button group -->
+                        <div class="form-group row">
+                            <!-- Task 2.2: The label of the row containing the buttons is set to Section.-->
+                            <label for="section" class="col-12 col-sm-2 col-form-label">Section</label>
+                            <div class="col-12 col-sm-4">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <!-- Task 2.1 : radio button group with the labels non-smoking in green and smoking in red -->
+                                    <label class="btn btn-success active">
+                                        <!-- Task 2.3: The non-smoking button is checked by default -->
+                                        <input type="radio" class="form-control" id="nonsmoking" name="secion" checked>Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" class="form-control" id="smoking" name="section">Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="dateandtime" class="col-12 col-sm-2 col-form-label"> Date and time</label>
+                            <div class="col-12 col-sm-4">
+                                <input type="date" class="form-control" id="dateval" name="dateval" placeholder="Date">
+                            </div> 
+                            <div class="col-12 col-sm-4">
+                                <input type="time" class="form-control" id="timeval" name="timeval" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="form-group row modal-footer">
+                            <div class="col-sm-10">
+                                <!-- Task 1.3:  modal includes a Cancel button to dismiss the modal. -->
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="button" role="button" class="btn btn-primary btn-sm ml-1">Reserve</button>
+                            </div>  
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -80,15 +164,16 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <!-- Task 3: Create Reserve Table Button sharing equal width with the logo -->
+                <!-- Task 3: Toggle Reserve table modal using the button -->
                 <div class="col-12 col-sm-6 align-self-center">
                     <div class="row align-items-center">
                         <div class="col-12 col-sm">
                             <img src="img/logo.png" class="img-fluid">
                         </div>
+                        <!-- Task 3.1: The tooltip has been removed from the Reserve Table button and the corresponding JavaScript code has been removed from the bottom of the page. -->
                         <div class="col-12 col-sm">
-                            <a href="#reservertable" class="btn btn-sm btn-warning btn-block" role="button" data-toggle="tooltip" data-html="true"
-                            title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve Table</a>
+                            <!-- Task 3.2: button will show the modal containing the table reservation form when clicked-->
+                            <a data-toggle="modal" data-target="#reservertable" class="btn btn-sm btn-warning btn-block" role="button">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -157,7 +242,6 @@
             <div class="col-12 col-sm-4 order-sm-first">
                 <h3>This Month's Promotions</h3>
             </div>
-            <!-- Task 2 -->
             <div class="col-12 col-sm">
                 <div class="media">
                     <div class="media-body">
@@ -179,62 +263,6 @@
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
                         <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Task 1 -->
-        <div class="row align-items-center justify-content-center row-content" id="reservertable">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="numberofguests" class="col-sm-2 col-form-label">Number of Guests</label>
-                                <div class="co-12 col-md-10">
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" id="g1" name="numofguests" value="1">
-                                        <label class="form-check-label" for="g1">1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" id="g2" name="numofguests" value="2">
-                                        <label class="form-check-label" for="g2">2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" id="g3" name="numofguests" value="3">
-                                        <label class="form-check-label" for="g3">3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" id="g4" name="numofguests" value="4">
-                                        <label class="form-check-label" for="g4">4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" id="g5" name="numofguests" value="5">
-                                        <label class="form-check-label" for="g5">5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" id="g6" name="numofguests" value="6">
-                                        <label class="form-check-label" for="g6">6</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="dateandtime" class="col-12 col-sm-2 col-form-label"> Date and time</label>
-                                <div class="col-12 col-sm-4">
-                                    <input type="date" class="form-control" id="dateval" name="dateval" placeholder="Date">
-                                </div> 
-                                <div class="col-12 col-sm-4">
-                                    <input type="time" class="form-control" id="timeval" name="timeval" placeholder="Time">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-sm-2 col-sm-10">
-                                    <button type="submit" role="button" class="btn btn-primary">Reserve</button>
-                                </div>
-                                
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -287,9 +315,4 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
